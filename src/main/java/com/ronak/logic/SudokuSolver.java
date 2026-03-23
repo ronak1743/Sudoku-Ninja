@@ -5,9 +5,9 @@ import java.util.Collections;
 
 public class SudokuSolver {
 
-    //Function on Backtracking which is use to solve sudoku
+    //Function on Backtracking which is used to solve sudoku
     //return true if solve otherwise false if solution is not possible
-    public boolean solveSudoku(int board [][]){
+    public boolean solveSudoku(int[][] board){
 
         //A list of possible all digits with random shuffle
         ArrayList<Integer>list = new ArrayList<>();
@@ -16,7 +16,7 @@ public class SudokuSolver {
         }
         Collections.shuffle(list);
 
-        //main Logic tavel on each cell
+        //main Logic travel on each cell
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
 
@@ -45,7 +45,7 @@ public class SudokuSolver {
     }
 
     //check for if current value is safe for current cell
-    public boolean isSafe(int board[][],int r,int c,int x){
+    public boolean isSafe(int[][] board, int r, int c, int x){
         //check in current col
         for(int i=0;i<9;i++){
             if(i==c){
